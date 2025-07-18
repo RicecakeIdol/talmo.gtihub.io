@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d1117;
+  color: #00e676;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1f2937;
+  color: #00e676;
+  padding: 2rem;
+  border-bottom: 2px solid #00e676;
+  box-shadow: 0 4px 10px rgba(0, 255, 128, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00e676;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 4rem auto 2rem auto;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #00e676;
+  border: 2px solid #00e676;
+  padding: 0.6rem 1.4rem;
+  border-radius: 12px;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 230, 118, 0.2);
+  color: #ffffff;
+  transform: scale(1.08);
+  border-color: #ffffff;
+}
+
+/* 페이지 본문을 중앙 정렬 */
+.page-content {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 입력 요소 스타일 */
+input[type="number"],
+input[type="text"],
+button {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #1f2937;
+  color: #00e676;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid #00e676;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00e676;
+  color: #0d1117;
+}
+
+/* 메인으로 돌아가기 버튼 */
+.back-home {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: #00e676;
+  color: #0d1117;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00e676;
+  transition: 0.3s;
+}
+
+.back-home:hover {
+  background-color: #1de9b6;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 250px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #bbb;
+  color: #0ff;
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Orbitron', sans-serif;
+}

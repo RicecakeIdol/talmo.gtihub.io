@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMI 계산기</title>
+  <link rel="stylesheet" href="css/bmi.css" />
+</head>
+<body>
+  <div class="page-content">
+    <h2>BMI 계산기</h2>
+    <input type="number" id="height" placeholder="키 (cm)" />
+    <input type="number" id="weight" placeholder="몸무게 (kg)" />
+    <button onclick="calculateBMI()">계산하기</button>
+    <p id="result"></p>
+    <a href="index.html" class="back-button">🏠 메인으로 돌아가기</a>
+  </div>
+
+  <script>
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+
+      if (!height || !weight || height <= 0 || weight <= 0) {
+        alert('올바른 키와 몸무게를 입력해주세요.');
+        return;
+      }
+
+      const heightM = height / 100;
+      const bmi = weight / (heightM * heightM);
+      let category = '';
+
+      if (bmi < 18.5) category = '저체중';
+      else if (bmi < 23) category = '정상체중';
+      else if (bmi < 25) category = '과체중';
+      else category = '비만';
+
+      document.getElementById('result').innerText =
+        `BMI: ${bmi.toFixed(2)} (${category})`;
+    }
+  </script>
+</body>
+</html>

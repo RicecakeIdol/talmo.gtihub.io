@@ -1,0 +1,84 @@
+/* checklist.css */
+
+body {
+    background-color: #0d0d0d;
+    color: #00ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  
+  form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #00ffff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px #00ffff;
+  }
+  
+  label {
+    display: block;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #00ffff;
+    transform: scale(1.2);
+  }
+  
+  button {
+    background-color: #00ffff;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffff;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00dada;
+    box-shadow: 0 0 20px #00ffff;
+  }
+  
+  #checkResult {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #00ffff;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff;
+  }
+  

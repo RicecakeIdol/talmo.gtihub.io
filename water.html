@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>물 섭취 기록</title>
+  <link rel="stylesheet" href="css/water.css" />
+</head>
+<body>
+  <h2>💧 오늘 마신 물 기록하기</h2>
+
+  <div class="input-group">
+    <input type="number" id="waterInput" placeholder="ml 입력" min="1" />
+    <button onclick="addWater()">기록하기</button>
+  </div>
+
+  <ul id="waterList"></ul>
+
+  <a href="index.html" class="back-button">메인으로 돌아가기</a>
+
+  <script>
+    function addWater() {
+      const input = document.getElementById("waterInput");
+      const val = input.value.trim();
+      if (val !== "" && !isNaN(val) && Number(val) > 0) {
+        const li = document.createElement("li");
+        li.textContent = `${val} ml 마셨음 💧`;
+        document.getElementById("waterList").appendChild(li);
+        input.value = "";
+      } else {
+        alert("올바른 숫자를 입력하세요.");
+      }
+    }
+  </script>
+</body>
+</html>

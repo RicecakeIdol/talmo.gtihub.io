@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>건강 체크리스트</title>
+  <link rel="stylesheet" href="css/checklist.css">
+</head>
+<body>
+  <h2>✅ 오늘의 건강 체크리스트</h2>
+  <form id="checklistForm">
+    <label><input type="checkbox"> 7시간 이상 수면</label><br>
+    <label><input type="checkbox"> 하루 30분 이상 운동</label><br>
+    <label><input type="checkbox"> 채소 섭취</label><br>
+    <label><input type="checkbox"> 스크린 타임 줄이기</label><br>
+    <label><input type="checkbox"> 물 충분히 마시기</label><br><br>
+    <button type="button" onclick="checkList()">완료</button>
+  </form>
+  <p id="checkResult"></p>
+
+  <body>
+    <div class="main-content">
+      <!-- 기능 요소들 -->
+    </div>
+  
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="index.html" class="back-button">메인으로 돌아가기</a>
+    </div>
+  </body>
+
+  <script>
+    function checkList() {
+      const checks = document.querySelectorAll('input[type="checkbox"]');
+      let done = 0;
+      checks.forEach((c) => { if (c.checked) done++; });
+      document.getElementById('checkResult').innerText = `총 ${done}개 실천했어요!`;
+    }
+  </script>
+</body>
+</html>
